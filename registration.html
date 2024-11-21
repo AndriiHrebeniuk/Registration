@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>GreenShop</title>
+
+    <link rel="stylesheet" href="./css/styleregister.css" />
+    <link rel="stylesheet" href="./fonts/font.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Encode+Sans:wdth,wght@116.9,100..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <div class="main_background">
+      <div class="second_background">
+        <div class="toggle-switch">
+          <input type="radio" id="login" name="toggle" checked />
+          <label for="login" class="option">Вход</label>
+
+          <input type="radio" id="register" name="toggle" />
+          <label for="register" class="option">Регистрация</label>
+
+          <div class="slider"></div>
+        </div>
+        <div>
+          <h2 class="entry">Вход</h2>
+          <input
+            class="email_input"
+            type="email"
+            placeholder="Введите E-mail"
+            name="login"
+          />
+          <input
+            class="password_input"
+            type="password"
+            placeholder="Пароль"
+            autocomplete="new-password"
+          />
+          <div class="checkbox_remember">
+            <form>
+              <input type="checkbox" id="customCheckbox" />
+              <label class="custom_lable" for="customCheckbox"
+                >Запомнить меня</label
+              >
+            </form>
+          </div>
+          <a class="password_link" href="#">Забыл пароль</a>
+          <button class="button_entry">Войти</button>
+          <p class="forgot_password">Забыли пароль?</p>
+          <a class="register" href="#">Зарегистрироваться</a>
+          <p class="or_entry">Или войдите через</p>
+          <a href="#"
+            ><img class="facebook" src="./img/facebook_registration.svg" alt=""
+          /></a>
+          <a href="#"
+            ><img
+              class="instagram"
+              src="./img/instagram_registration.svg"
+              alt=""
+          /></a>
+          <a href="#"
+            ><img class="linkedin" src="./img/linkedin_registration.svg" alt=""
+          /></a>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

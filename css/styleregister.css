@@ -1,0 +1,427 @@
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+    display: block;
+}
+
+body {
+    line-height: 1;
+}
+
+ol,
+ul {
+    list-style: none;
+}
+
+blockquote,
+q {
+    quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+    content: '';
+    content: none;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+body {
+    font-family: Cera Pro;
+        
+}
+
+.main_background {
+    width: 100%;
+    margin: 0 auto;
+    height: 760px;
+    background-image: url('../img/main_background.png');
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+}
+.second_background {
+    position: relative;
+        width: 496px;
+            height: 760px;
+            left: 743px;
+            gap: 0px;
+            opacity: 0px;
+        background: #E9E9E940;
+        backdrop-filter: blur(7px);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: #fff;
+        font-size: 24px;
+    
+}
+
+.toggle-switch {
+    position: absolute;
+    display: flex;
+    width: 340px;
+    top: 60px;
+    height: 36px;
+    border: 1px solid #3b503a;
+    border-radius: 30px;
+    background-color: transparent;
+    overflow: hidden;
+    font-family: Arial, sans-serif;
+}
+
+.toggle-switch input {
+    display: none;
+}
+
+.option {
+        font-size: 12px;
+        font-weight: 400;
+        line-height: 14.06px;
+        text-decoration-skip-ink: none;
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    z-index: 2;
+    cursor: pointer;
+}
+
+.option:nth-of-type(1) {
+    color: white;
+}
+
+.option:nth-of-type(2) {
+    color: white;
+}
+
+input#login:checked~.slider {
+    transform: translateX(0);
+}
+
+input#register:checked~.slider {
+    transform: translateX(168px);
+}
+
+.slider {
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    right: 2px  ;
+    width: 167px;
+        height: 32px;    
+    background-color: #173b19;
+    border-radius: 30px;
+    transition: transform 0.4s ease;
+    z-index: 1;
+}
+
+.entry {
+        position: absolute;
+        top: 171px;
+        left: 214px;
+        font-size: 30px;
+        font-weight: 400;
+        line-height: 35.16px;
+        text-align: center;
+        text-decoration-skip-ink: none;
+        user-select: none;
+}
+.email_input {
+    position: absolute;
+    top: 235px;
+    left: 78px;
+    width: 340px;
+        height: 44px;
+        background: #929191;
+        border-radius: 30px;
+        opacity: 0px;
+        border: 0px;
+        padding-left: 20px;
+        outline: none;
+}
+.email_input::placeholder {
+color: #FFFFFF;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 14.06px;
+    text-decoration-skip-ink: none;
+}
+
+
+.password_input {
+    position: absolute;
+    top: 298px;
+    left: 78px;
+    width: 340px;
+    height: 44px;
+    background: #929191;
+        border-radius: 30px;
+        opacity: 0px;
+        border: 0px;
+        outline: none;
+        padding-left: 20px;
+}
+
+.password_input::placeholder {
+    color: #FFFFFF;
+        font-size: 12px;
+        font-weight: 400;
+        line-height: 14.06px;
+        text-decoration-skip-ink: none;
+
+}
+
+
+ input[type="checkbox"] {
+     display: none;
+ }
+
+.custom_lable {
+     position: relative;
+     display: inline-block;
+     padding-left: 30px;
+        font-size: 12px;
+        font-weight: 400;
+        line-height: 14.06px;
+     cursor: pointer;
+     user-select: none;
+ }
+
+
+.custom_lable::before {
+     content: '';
+     position: absolute;
+     left: 0;
+     top: 0;
+     width: 15px;
+     height: 15px;
+     border: 2px solid #ccc;
+     background-color: transparent;
+     border-radius: 4px;
+     transition: background-color 0.3s ease, border-color 0.3s ease;
+ }
+
+ input[type="checkbox"]:checked+.custom_lable::before {
+     background-color: #153416;
+     border-color: #153416;
+ }
+
+ input[type="checkbox"]:checked+.custom_lable::after {
+     content: '✔';
+     position: absolute;
+     left: 3px;
+     top: 2px;
+     color: white;
+     font-size: 14px;
+ }
+
+ .password_link {
+        position: absolute;
+        font-size: 12px;
+        left: 325px;
+        top: 359px;
+        font-weight: 400;
+        line-height: 14.06px;
+        color: #153416;
+        text-decoration-line: underline;
+        text-decoration-style: solid;
+        text-underline-position: from-font;
+        text-decoration-skip-ink: none;
+ }
+
+ .checkbox_remember {
+    position: absolute;
+    left: 81px;
+    top: 349px;
+ }
+ .button_entry {
+    position: absolute;
+    width: 340px;
+        height: 44px;
+        top: 403px;
+        left: 78px;
+        border: none;
+        border-radius: 30px;
+        opacity: 0px;
+        background: #153416;
+        color: #FFFFFF;
+        cursor: pointer;
+ }
+
+ .button_entry:before {
+     content: '';
+     position: absolute;
+     top: 0;
+     left: 0;
+     width: 0;
+     height: 44px;
+     background: rgba(85, 155, 76, 0.3);
+     border-radius: 30px;
+     transition: all 0.3s ease;
+ }
+
+ .button_entry:hover:before {
+     width: 100%;
+ }
+
+ .forgot_password {
+        position: absolute;
+        top: 487px;
+        left: 136px;
+        font-size: 12px;
+        font-weight: 400;
+        line-height: 14.06px;
+        text-underline-position: from-font;
+        text-decoration-skip-ink: none;
+        color: #153416;
+        user-select: none;
+ }
+
+ .register {
+    position: absolute;
+    top: 487px;
+    left: 256px;
+        font-size: 12px;
+        font-weight: 400;
+        line-height: 14.06px;
+        text-decoration-line: underline;
+        text-decoration-style: solid;
+        text-decoration-skip-ink: none;
+        color: #FFFFFF;
+ }
+
+ .or_entry {
+        position: absolute;
+            top: 531px;
+            left: 194px;
+            font-size: 12px;
+            font-weight: 400;
+            line-height: 14.06px;
+            text-underline-position: from-font;
+            text-decoration-skip-ink: none;
+            color: #153416;
+            user-select: none;
+ }
+
+ .facebook {
+    position: absolute;
+    top: 565px;
+    left: 197px;
+ }
+
+ .instagram {
+    position: absolute;
+        top: 565px;
+        left: 231px;
+ }
+
+ .linkedin {
+    position: absolute;
+        top: 565px;
+        left: 275px;
+ }
